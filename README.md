@@ -1,4 +1,5 @@
 # WordSwitch.nvim
+
 > A simple word switch plugin with neovim
 
 WordSwitch.nvim is a simple plugin for [Neovim](https://neovim.io)
@@ -23,7 +24,7 @@ A rewrite of [Antovim](https://github.com/jwarby/antovim) use Lua
 
 ## Requirements
 
-WordSwitch.nvim require Neovim version 0.7 or abvoe
+WordSwitch.nvim require Neovim version 0.7 or above
 
 ## Installation
 
@@ -40,12 +41,15 @@ use 'tandy1229/wordswitch.nvim'
 Or you can use other plugin manager.
 
 ## Quick Start
+
 The plugin provides a single command `WordSwitch`, which will replace the word under the matching word within a list of substitutions. eg, with your cursor over the word **true** will switch to **false**.
 
 The default mapping is `gs` to switch the word.
 
 ## Source Word
+
 The default words list are beneath:
+
 ```lua
 { 'acquire'   , 'release'      }
 { 'add'       , 'remove'       }
@@ -121,4 +125,5 @@ The default words list are beneath:
 ```
 
 ## Credit
+
 - [Antovim](https://github.com/jwarby/antovim)
