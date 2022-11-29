@@ -17,8 +17,9 @@ A rewrite of [Antovim](https://github.com/jwarby/antovim) use [Lua](https://www.
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Quick Start](#quick-start)
-  - [Source Word](#source-word)
+  - [Change keymap](#change-keymap)
   - [Custom list](#custom-list)
+  - [Source Word](#source-word)
   - [Credit](#credit)
 
 <!-- /code_chunk_output -->
@@ -46,6 +47,44 @@ Or you can use other plugin manager.
 The plugin provides a single command `WordSwitch`, which will replace the word under the matching word within a list of substitutions. eg, with your cursor over the word **true** will switch to **false**.
 
 The default mapping is `gs` to switch the word.
+
+## Change keymap
+
+You can change the default keymap `gs` to your prefer, for example:
+
+For `init.vim` user, you can add it into your init.vim:
+
+```vim
+let g:wordswitch_keymap = '<Leader>s'
+```
+
+For `init.lua` user, you can add it to your init.lua:
+
+```lua
+vim.g.wordswitch_keymap = '<Leader>s'
+```
+
+## Custom list
+
+You can customize your own list, use `g:custom_wordswitch_definitions` to add your own list, for example:
+
+For `init.vim` user, you can add it into your init.vim:
+
+```vim
+let g:custom_wordswitch_definitions = [
+\  [ 'let', 'unlet' ],
+\  [ 'thx', 'thank you']
+]
+```
+
+For `init.lua` user, you can add it to your init.lua:
+
+```lua
+vim.g.custom_wordswitch_definitions = {
+    { 'let', 'unlet' },
+    { 'thx', 'thank you' }
+}
+```
 
 ## Source Word
 
@@ -99,6 +138,7 @@ The default words list are beneath:
 { 'link'      , 'unlink'       }
 { 'load'      , 'unload'       }
 { 'lock'      , 'unlock'       }
+{ 'max'       , 'min'          }
 { 'maximum'   , 'minimum'      }
 { 'new'       , 'old'          }
 { 'next'      , 'previous'     }
@@ -114,7 +154,6 @@ The default words list are beneath:
 { 'send'      , 'receive'      }
 { 'serialize' , 'deserialize'  }
 { 'set'       , 'get'          }
-{ 'set'       , 'up tear down' }
 { 'show'      , 'hide'         }
 { 'start'     , 'stop'         }
 { 'true'      , 'false'        }
@@ -123,28 +162,6 @@ The default words list are beneath:
 { 'up'        , 'down'         }
 { 'Up'        , 'Down'         }
 { 'upper'     , 'lower'        }
-```
-
-## Custom list
-
-You can customize your own list, use `g:custom_wordswitch_definitions` to add your own list, for example:
-
-For `init.vim` user, you can add it into your init.vim:
-
-```vim
-let g:custom_wordswitch_definitions = [
-\  [ 'let', 'unlet' ],
-\  [ 'thx', 'thank you']
-]
-```
-
-For `init.lua` user, you can add it to your init.lua:
-
-```lua
-vim.g.custom_wordswitch_definitions = {
-    { 'let', 'unlet' },
-    { 'thx', 'thank you' }
-}
 ```
 
 ## Credit
