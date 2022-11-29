@@ -4,7 +4,7 @@
 
 WordSwitch.nvim is a simple plugin for [Neovim](https://neovim.io)
 
-A rewrite of [Antovim](https://github.com/jwarby/antovim) use Lua
+A rewrite of [Antovim](https://github.com/jwarby/antovim) use [Lua](https://www.lua.org/)
 
 ## Table of contents
 
@@ -18,6 +18,7 @@ A rewrite of [Antovim](https://github.com/jwarby/antovim) use Lua
   - [Installation](#installation)
   - [Quick Start](#quick-start)
   - [Source Word](#source-word)
+  - [Custom list](#custom-list)
   - [Credit](#credit)
 
 <!-- /code_chunk_output -->
