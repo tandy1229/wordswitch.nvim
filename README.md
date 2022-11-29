@@ -124,6 +124,29 @@ The default words list are beneath:
 { 'upper'     , 'lower'        }
 ```
 
+## Custom list
+
+You can customize your own list, use `g:custom_wordswitch_definitions` to add your own list, for example:
+
+For `init.vim` user, you can add it into your init.vim:
+
+```vim
+let g:custom_wordswitch_definitions = [
+\  [ 'let', 'unlet' ],
+\  [ 'thx', 'thank you']
+]
+```
+
+For `init.lua` user, you can add it to your init.lua:
+
+```lua
+vim.g.custom_wordswitch_definitions = {
+    { 'let', 'unlet' },
+    { 'thx', 'thank you' }
+}
+```
+
 ## Credit
 
 - [Antovim](https://github.com/jwarby/antovim)
+

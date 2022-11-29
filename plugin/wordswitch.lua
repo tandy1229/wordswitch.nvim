@@ -1,7 +1,7 @@
 local M = {}
 local g, api, keymap = vim.g, vim.api, vim.keymap
 local switch = require('wordswitch')
-g.antovim_definitions = {
+g.wordswitch_definitions = {
 	{ 'acquire', 'release' },
 	{ 'add', 'remove' },
 	{ 'advance', 'retreat' },

@@ -2,10 +2,10 @@ local M = {}
 local g, fn = vim.g, vim.fn
 function M.wordswitch()
 	local dictionary, sub
-	if g.custom_antovim_definitions then
-		dictionary = g.antovim_definitions .. g.custom_antovim_definitions
+	if g.custom_wordswitch_definitions then
+		dictionary =  g.custom_wordswitch_definitions .. g.wordswitch_definitions
 	else
-		dictionary = g.antovim_definitions
+		dictionary = g.wordswitch_definitions
 	end
 
 	local word = fn.expand('<cword>')
@@ -17,8 +17,10 @@ function M.wordswitch()
             if word == d then
                 if #v == temp then
                     sub = v[1]
+                    break
                 else
                     sub = v[temp + 1]
+                    break
                 end
             end
         end
