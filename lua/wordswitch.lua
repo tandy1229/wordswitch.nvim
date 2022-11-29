@@ -17,12 +17,16 @@ function M.wordswitch()
 			if word == d then
 				if #v == temp then
 					sub = v[1]
-					break
 				else
 					sub = v[temp + 1]
-					break
 				end
 			end
+            if sub then
+                break
+            end
+		end
+		if sub then
+			break
 		end
 	end
 	if sub then
