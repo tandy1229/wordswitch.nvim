@@ -80,6 +80,11 @@ api.nvim_create_user_command('WordSwitch', function()
 	switch.wordswitch()
 end, { force = true })
 
-keymap.set('n', 'gs', '<cmd>WordSwitch<CR>', { silent = true })
+if g.wordswitch_keymap then
+else
+    g.wordswitch_keymap = 'gs'
+end
+
+keymap.set('n', g.wordswitch_keymap, '<cmd>WordSwitch<CR>', { silent = true })
 
 return M
