@@ -1,6 +1,6 @@
 local M = {}
 local g, fn = vim.g, vim.fn
-function M.antovim_swap()
+function M.wordswitch()
 	local dictionary, sub
 	if g.custom_antovim_definitions then
 		dictionary = g.antovim_definitions .. g.custom_antovim_definitions

@@ -75,10 +75,10 @@ g.antovim_definitions = {
 	{ 'upper', 'lower' },
 }
 
-api.nvim_create_user_command('Antovim', function()
-	switch.antovim_swap()
+api.nvim_create_user_command('WordSwitch', function()
+	switch.wordswitch()
 end, { force = true })
 
-keymap.set('n', 'gs', '<cmd>Antovim<CR>', { silent = true })
+keymap.set('n', 'gs', '<cmd>WordSwitch<CR>', { silent = true })
 
 return M
