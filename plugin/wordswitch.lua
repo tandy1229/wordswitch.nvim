@@ -73,6 +73,7 @@ g.antovim_definitions = {
 	{ 'up', 'down' },
 	{ 'Up', 'Down' },
 	{ 'upper', 'lower' },
+	{ 'bom', 'middle', 'top' },
 }
 
 api.nvim_create_user_command('WordSwitch', function()
