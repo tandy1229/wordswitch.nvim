@@ -2,6 +2,8 @@
 
 > A simple word switch plugin with neovim
 
+![Example](media/demo.gif)
+
 WordSwitch.nvim is a simple plugin for [Neovim](https://neovim.io)
 
 A rewrite of [Antovim](https://github.com/jwarby/antovim) use [Lua](https://www.lua.org/)
@@ -21,6 +23,7 @@ A rewrite of [Antovim](https://github.com/jwarby/antovim) use [Lua](https://www.
   - [Custom list](#custom-list)
   - [Source Word](#source-word)
   - [Credit](#credit)
+  - [LISENCE](#lisence)
 
 <!-- /code_chunk_output -->
 
@@ -73,7 +76,8 @@ For `init.vim` user, you can add it into your init.vim:
 ```vim
 let g:custom_wordswitch_definitions = [
 \  [ 'let', 'unlet' ],
-\  [ 'thx', 'thank you']
+\  [ 'thx', 'thank you'],
+\  [ 'under', 'below', 'beneath']
 ]
 ```
 
@@ -82,7 +86,8 @@ For `init.lua` user, you can add it to your init.lua:
 ```lua
 vim.g.custom_wordswitch_definitions = {
     { 'let', 'unlet' },
-    { 'thx', 'thank you' }
+    { 'thx', 'thank you' },
+    { 'under', 'below', 'beneath' }
 }
 ```
 
@@ -168,3 +173,6 @@ The default words list are beneath:
 
 - [Antovim](https://github.com/jwarby/antovim)
 
+## LISENCE
+
+Anti 996
