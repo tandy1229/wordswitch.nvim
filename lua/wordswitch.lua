@@ -1,5 +1,6 @@
 local M = {}
 local g, fn = vim.g, vim.fn
+
 function M.wordswitch()
 	local dictionary, sub
 	if g.custom_wordswitch_definitions then
@@ -9,7 +10,8 @@ function M.wordswitch()
 	end
 
 	local word = fn.expand("<cword>")
-
+	-- TODO: find a way which can search words more effective
+	-- without using vim.fn.index() api
 	for _, v in ipairs(dictionary) do
 		local temp = 0
 		for _, d in ipairs(v) do
@@ -17,18 +19,15 @@ function M.wordswitch()
 			if word == d then
 				if #v == temp then
 					sub = v[1]
+					goto dest
 				else
 					sub = v[temp + 1]
+					goto dest
 				end
 			end
-            if sub then
-                break
-            end
-		end
-		if sub then
-			break
 		end
 	end
+	::dest::
 	if sub then
 		vim.cmd("normal! ciw" .. sub)
 	end
