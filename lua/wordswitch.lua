@@ -17,13 +17,8 @@ function M.wordswitch()
 		for _, d in ipairs(v) do
 			temp = temp + 1
 			if word == d then
-				if #v == temp then
-					sub = v[1]
-					goto dest
-				else
-					sub = v[temp + 1]
-					goto dest
-				end
+				sub = v[temp % #v + 1]
+				goto dest
 			end
 		end
 	end
@@ -32,6 +27,7 @@ function M.wordswitch()
 		vim.cmd("normal! ciw" .. sub)
 	end
 end
+
 return M
 
 -- another solve
