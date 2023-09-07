@@ -7,16 +7,19 @@ local g, fn = vim.g, vim.fn
 -- In the future times I will find some
 -- plugin to learn the way it become.
 function M.wordswitch()
-	local dictionary, sub
+	local dictionary
 	if g.custom_wordswitch_definitions then
 		dictionary = g.custom_wordswitch_definitions .. g.wordswitch_definitions
 	else
 		dictionary = g.wordswitch_definitions
 	end
+
+	local sub
 	---@type string word
 	local word = fn.expand("<cword>")
 	local word_first_char = word:sub(1, 1)
 	local word_low_case = word:lower()
+
 	local found = false
 	-- TODO: find a way which can search words more effective
 	-- without using vim.fn.index() api
@@ -34,6 +37,7 @@ function M.wordswitch()
 			end
 		end
 	end
+
 	if sub then
 		if word == word:upper() then
 			sub = sub:upper()
