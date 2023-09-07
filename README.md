@@ -12,8 +12,7 @@ A rewrite of [Antovim](https://github.com/jwarby/antovim) use [Lua](https://www.
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-<!-- code_chunk_output -->
-
+<!--toc:start-->
 - [WordSwitch.nvim](#wordswitchnvim)
   - [Table of contents](#table-of-contents)
   - [Requirements](#requirements)
@@ -22,10 +21,10 @@ A rewrite of [Antovim](https://github.com/jwarby/antovim) use [Lua](https://www.
   - [Change keymap](#change-keymap)
   - [Custom list](#custom-list)
   - [Source Word](#source-word)
+  - [Star History](#star-history)
   - [Credit](#credit)
-  - [LISENCE](#lisence)
-
-<!-- /code_chunk_output -->
+  - [LICENSE](#license)
+<!--toc:end-->
 
 ## Requirements
 
@@ -43,11 +42,27 @@ Plug 'tandy1229/wordswitch.nvim'
 use 'tandy1229/wordswitch.nvim'
 ```
 
+For [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+-- lazy.nvim
+{ 'tandy1229/wordswitch.nvim' },
+```
+
+
 Or you can use other plugin manager.
 
 ## Quick Start
 
-The plugin provides a single command `WordSwitch`, which will replace the word under the matching word within a list of substitutions. eg, with your cursor over the word **true** will switch to **false**.
+The plugin provides a single command `WordSwitch`, which will replace the word
+under the matching word within a list of substitutions. eg, with your cursor
+over the word **true** will switch to **false**.
+
+> **Note**
+>
+> now you can also switch **TRUE** to **FALSE** and switch **True** to **False**!!
+>
+> It works for all other dictionaries!
 
 The default mapping is `gs` to switch the word.
 
@@ -69,7 +84,8 @@ vim.g.wordswitch_keymap = '<Leader>s'
 
 ## Custom list
 
-You can customize your own list, use `g:custom_wordswitch_definitions` to add your own list, for example:
+You can customize your own list, use `g:custom_wordswitch_definitions` to
+add your own list, for example:
 
 For `init.vim` user, you can add it into your init.vim:
 
@@ -162,17 +178,24 @@ The default words list are beneath:
 { 'show'      , 'hide'         }
 { 'start'     , 'stop'         }
 { 'true'      , 'false'        }
-{ 'True'      , 'False'        }
-{ 'TRUE'      , 'FALSE'        }
 { 'up'        , 'down'         }
-{ 'Up'        , 'Down'         }
 { 'upper'     , 'lower'        }
 ```
+
+## Star History
+
+<a href="https://star-history.com/#tandy1229/wordswitch.nvim&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=tandy1229/wordswitch.nvim&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=tandy1229/wordswitch.nvim&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=tandy1229/wordswitch.nvim&type=Date" />
+  </picture>
+</a>
 
 ## Credit
 
 - [Antovim](https://github.com/jwarby/antovim)
 
-## LISENCE
+## LICENSE
 
-Anti 996
+MIT
