@@ -68,13 +68,9 @@ g.wordswitch_definitions = {
 	{ "show", "hide" },
 	{ "start", "stop" },
 	{ "true", "false" },
-	{ "True", "False" },
-	{ "TRUE", "FALSE" },
 	{ "up", "down" },
-	{ "Up", "Down" },
 	{ "upper", "lower" },
 	{ "yes", "no" },
-	{ "Yes", "No" },
 }
 
 api.nvim_create_user_command("WordSwitch", function()
